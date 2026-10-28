@@ -1,0 +1,15 @@
+/vendor/
+/.phpunit.cache/
+/.phpstan.cache/
+.phpunit.result.cache
+.DS_Store
+Thumbs.db
+.env
+.env.backup
+.env.*.php
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
+composer.phar

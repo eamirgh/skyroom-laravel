@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+/tests export-ignore
+/.github export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/phpunit.xml.dist export-ignore
+/phpstan.neon.dist export-ignore
+/AGENTS.md export-ignore
+/Skyroom\ Web\ Service.pdf export-ignore
