@@ -2,10 +2,13 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
 [![CI Status](https://img.shields.io/github/actions/workflow/status/eamirgh/skyroom-laravel/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/eamirgh/skyroom-laravel/actions)
+[![Documentation](https://img.shields.io/badge/docs-vitepress-blue.svg?style=flat-square)](https://eamirgh.github.io/skyroom-laravel/)
 [![Total Downloads](https://img.shields.io/packagist/dt/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
 [![License](https://img.shields.io/packagist/l/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
 
 Production-ready, test-driven Laravel package wrapper for the [Skyroom Web Service API](https://www.skyroom.online).
+
+📖 **[Full Documentation & Live Examples](https://eamirgh.github.io/skyroom-laravel/)**
 
 ---
 

@@ -109,4 +109,9 @@ composer validate --strict
 
 # Run specific test file
 ./vendor/bin/phpunit tests/Feature/RoomsApiTest.php
+
+# Documentation (VitePress)
+npm run docs:dev     # Start local doc server
+npm run docs:build   # Build static doc site
+npm run docs:preview # Preview built doc site
 ```

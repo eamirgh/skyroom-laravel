@@ -13,3 +13,7 @@ Thumbs.db
 *.sublime-workspace
 *.log
 composer.phar
+/node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+

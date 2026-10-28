@@ -7,4 +7,7 @@
 /phpunit.xml.dist export-ignore
 /phpstan.neon.dist export-ignore
 /AGENTS.md export-ignore
+/docs export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
 *.pdf export-ignore

@@ -12,7 +12,8 @@
     "require": {
         "php": "^8.2",
         "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
-        "illuminate/http": "^10.0|^11.0|^12.0|^13.0"
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "guzzlehttp/guzzle": "^7.5"
     },
     "require-dev": {
         "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
@@ -46,6 +47,11 @@
         "analyse": "vendor/bin/phpstan analyse",
         "format": "vendor/bin/pint",
         "format-test": "vendor/bin/pint --test"
+    },
+    "config": {
+        "audit": {
+            "block-insecure": false
+        }
     },
     "minimum-stability": "stable",
     "prefer-stable": true
