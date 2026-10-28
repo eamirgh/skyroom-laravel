@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Skyroom Laravel',
   description: 'Production-ready, test-driven Laravel wrapper package for the Skyroom Web Service API',
-  base: '/',
+  base: (process.env.BASE_PATH || '/skyroom-laravel/').replace(/\/?$/, '/'),
   lastUpdated: true,
   cleanUrls: true,
 
