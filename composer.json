@@ -11,14 +11,15 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^10.0|^11.0|^12.0",
-        "illuminate/http": "^10.0|^11.0|^12.0"
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
         "phpunit/phpunit": "^10.5|^11.0",
         "mockery/mockery": "^1.6",
-        "phpstan/phpstan": "^2.3"
+        "phpstan/phpstan": "^2.3",
+        "laravel/pint": "^1.32"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +43,9 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "analyse": "vendor/bin/phpstan analyse"
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint",
+        "format-test": "vendor/bin/pint --test"
     },
     "minimum-stability": "stable",
     "prefer-stable": true

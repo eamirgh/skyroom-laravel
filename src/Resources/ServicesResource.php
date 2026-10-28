@@ -8,8 +8,7 @@ class ServicesResource
 {
     public function __construct(
         protected SkyroomClientContract $client,
-    ) {
-    }
+    ) {}
 
     /**
      * Get list of available services.

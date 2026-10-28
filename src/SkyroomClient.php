@@ -3,7 +3,7 @@
 namespace Skyroom\Laravel;
 
 use Illuminate\Http\Client\ConnectionException;
-use Illuminate\Http\Client\Response;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Http;
 use Skyroom\Laravel\Contracts\SkyroomClientContract;
 use Skyroom\Laravel\Enums\AccessLevel;
@@ -18,7 +18,9 @@ use Skyroom\Laravel\Resources\UsersResource;
 class SkyroomClient implements SkyroomClientContract
 {
     protected ?ServicesResource $services = null;
+
     protected ?RoomsResource $rooms = null;
+
     protected ?UsersResource $users = null;
 
     public function __construct(
@@ -26,8 +28,7 @@ class SkyroomClient implements SkyroomClientContract
         protected string $baseUrl = 'https://www.skyroom.online/skyroom/api/',
         protected int $timeout = 30,
         protected array $retry = ['times' => 3, 'sleep_milliseconds' => 100],
-    ) {
-    }
+    ) {}
 
     /**
      * Call any raw action on Skyroom API.
@@ -43,10 +44,10 @@ class SkyroomClient implements SkyroomClientContract
             throw new AuthenticationException('Skyroom API key is not configured.');
         }
 
-        $url = rtrim($this->baseUrl, '/') . '/' . $this->apiKey;
+        $url = rtrim($this->baseUrl, '/').'/'.$this->apiKey;
 
         $payload = ['action' => $action];
-        if (!empty($params)) {
+        if (! empty($params)) {
             $payload['params'] = $params;
         }
 
@@ -66,7 +67,7 @@ class SkyroomClient implements SkyroomClientContract
                         return true;
                     }
 
-                    if ($exception instanceof \Illuminate\Http\Client\RequestException && $exception->response?->status() === 503) {
+                    if ($exception instanceof RequestException && $exception->response?->status() === 503) {
                         return true;
                     }
 
@@ -79,23 +80,23 @@ class SkyroomClient implements SkyroomClientContract
         try {
             $response = $request->post($url, $payload);
         } catch (\Throwable $e) {
-            throw new NetworkException('Failed to connect to Skyroom API: ' . $e->getMessage(), (int) $e->getCode(), $e);
+            throw new NetworkException('Failed to connect to Skyroom API: '.$e->getMessage(), (int) $e->getCode(), $e);
         }
 
         if ($response->status() === 503) {
             throw new RateLimitException('Skyroom API rate limit exceeded or service unavailable (503).', 503);
         }
 
-        if (!$response->successful()) {
+        if (! $response->successful()) {
             throw new NetworkException(
-                'Skyroom API request failed with HTTP status ' . $response->status(),
+                'Skyroom API request failed with HTTP status '.$response->status(),
                 $response->status()
             );
         }
 
         $data = $response->json();
 
-        if (!is_array($data) || !array_key_exists('ok', $data)) {
+        if (! is_array($data) || ! array_key_exists('ok', $data)) {
             throw new NetworkException('Invalid JSON response received from Skyroom API.');
         }
 

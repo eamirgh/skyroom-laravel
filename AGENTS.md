@@ -10,8 +10,8 @@ This document outlines architectural guidelines, project conventions, and operat
 
 ### Tech Stack
 - **Language**: PHP `>= 8.2`
-- **Framework compatibility**: Laravel `^10.0`, `^11.0`, and `^12.0`
-- **Testing**: PHPUnit `^10.5|^11.0`, Orchestra Testbench `^8.0|^9.0|^10.0`
+- **Framework compatibility**: Laravel `^10.0`, `^11.0`, `^12.0`, and `^13.0`
+- **Testing**: PHPUnit `^10.5|^11.0`, Orchestra Testbench `^8.0|^9.0|^10.0|^11.0`
 - **Static Analysis**: PHPStan `^2.3` (Level 6+)
 
 ---
@@ -99,6 +99,13 @@ composer test
 
 # Run static analysis
 composer analyse
+
+# Run code style checks & fixes
+composer format-test
+composer format
+
+# Validate composer
+composer validate --strict
 
 # Run specific test file
 ./vendor/bin/phpunit tests/Feature/RoomsApiTest.php

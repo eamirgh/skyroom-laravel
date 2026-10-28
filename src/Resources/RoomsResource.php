@@ -9,8 +9,7 @@ class RoomsResource
 {
     public function __construct(
         protected SkyroomClientContract $client,
-    ) {
-    }
+    ) {}
 
     /**
      * Get list of rooms.

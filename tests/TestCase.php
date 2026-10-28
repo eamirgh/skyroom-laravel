@@ -3,8 +3,8 @@
 namespace Skyroom\Laravel\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Skyroom\Laravel\SkyroomServiceProvider;
 use Skyroom\Laravel\Facades\Skyroom;
+use Skyroom\Laravel\SkyroomServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

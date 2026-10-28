@@ -1,7 +1,7 @@
 # Skyroom Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/eamirgh/skyroom-laravel/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/eamirgh/skyroom-laravel/actions)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/eamirgh/skyroom-laravel/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/eamirgh/skyroom-laravel/actions)
 [![Total Downloads](https://img.shields.io/packagist/dt/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
 [![License](https://img.shields.io/packagist/l/eamirgh/skyroom-laravel.svg?style=flat-square)](https://packagist.org/packages/eamirgh/skyroom-laravel)
 
@@ -23,7 +23,7 @@ Production-ready, test-driven Laravel package wrapper for the [Skyroom Web Servi
 ## Requirements
 
 - PHP `^8.2`
-- Laravel `^10.0`, `^11.0`, or `^12.0`
+- Laravel `^10.0`, `^11.0`, `^12.0`, or `^13.0`
 
 ---
 
@@ -342,6 +342,13 @@ Run static analysis:
 
 ```bash
 composer analyse
+```
+
+Run code style check / formatting:
+
+```bash
+composer format-test
+composer format
 ```
 
 ---

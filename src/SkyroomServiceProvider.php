@@ -9,7 +9,7 @@ class SkyroomServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/skyroom.php',
+            __DIR__.'/../config/skyroom.php',
             'skyroom'
         );
 
@@ -31,7 +31,7 @@ class SkyroomServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/skyroom.php' => $this->app->configPath('skyroom.php'),
+                __DIR__.'/../config/skyroom.php' => $this->app->configPath('skyroom.php'),
             ], 'skyroom-config');
         }
     }

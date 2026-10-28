@@ -2,6 +2,4 @@
 
 namespace Skyroom\Laravel\Exceptions;
 
-class RateLimitException extends SkyroomException
-{
-}
+class RateLimitException extends SkyroomException {}

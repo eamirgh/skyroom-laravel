@@ -2,6 +2,4 @@
 
 namespace Skyroom\Laravel\Exceptions;
 
-class NetworkException extends SkyroomException
-{
-}
+class NetworkException extends SkyroomException {}

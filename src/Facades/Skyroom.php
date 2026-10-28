@@ -35,7 +35,7 @@ use Skyroom\Laravel\Testing\SkyroomFake;
  * @method static int addUserRooms(int $userId, array $rooms)
  * @method static int removeUserRooms(int $userId, array $rooms)
  *
- * @see \Skyroom\Laravel\SkyroomClient
+ * @see SkyroomClient
  */
 class Skyroom extends Facade
 {

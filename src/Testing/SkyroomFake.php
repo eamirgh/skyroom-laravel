@@ -17,16 +17,17 @@ class SkyroomFake implements SkyroomClientContract
     protected array $recorded = [];
 
     protected ?ServicesResource $services = null;
+
     protected ?RoomsResource $rooms = null;
+
     protected ?UsersResource $users = null;
 
     /**
-     * @param array<string, mixed|callable> $responses
+     * @param  array<string, mixed|callable>  $responses
      */
     public function __construct(
         protected array $responses = [],
-    ) {
-    }
+    ) {}
 
     public function call(string $action, array $params = []): mixed
     {
@@ -225,6 +226,7 @@ class SkyroomFake implements SkyroomClientContract
                 $matching,
                 "Unexpected [{$action}] action was sent."
             );
+
             return;
         }
 
@@ -252,6 +254,7 @@ class SkyroomFake implements SkyroomClientContract
         if ($action !== null) {
             $matching = array_filter($this->recorded, fn ($call) => $call['action'] === $action);
             PHPUnit::assertCount($count, $matching);
+
             return;
         }
 

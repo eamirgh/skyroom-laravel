@@ -2,6 +2,4 @@
 
 namespace Skyroom\Laravel\Exceptions;
 
-class ServerException extends SkyroomApiException
-{
-}
+class ServerException extends SkyroomApiException {}

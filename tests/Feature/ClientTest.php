@@ -41,7 +41,7 @@ class ClientTest extends TestCase
             return $request->url() === 'https://www.skyroom.online/skyroom/api/test-key'
                 && $request->method() === 'POST'
                 && $request['action'] === 'getServices'
-                && !isset($request['params']);
+                && ! isset($request['params']);
         });
     }
 
